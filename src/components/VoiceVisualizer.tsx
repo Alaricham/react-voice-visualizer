@@ -96,8 +96,6 @@ const VoiceVisualizer = ({
     _setIsProcessingOnResize,
     _setIsProcessingAudioOnComplete,
   },
-  width = "100%",
-  height = 200,
   speed = 3,
   backgroundColor = "transparent",
   mainBarColor = "#FFFFFF",
@@ -407,15 +405,8 @@ const VoiceVisualizer = ({
       >
         <canvas
           ref={canvasRef}
-          width={canvasWidth}
-          height={canvasCurrentHeight}
           onClick={handleRecordedAudioCurrentTime}
-          style={{
-            height: formatToInlineStyleValue(height),
-            width: canvasCurrentWidth,
-          }}
         >
-          Your browser does not support HTML5 Canvas.
         </canvas>
         {isDefaultUIShown && isCleared && (
           <>
